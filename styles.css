@@ -1,0 +1,392 @@
+:root {
+    font-family: 'Archivo Narrow', sans-serif;
+    color: white;
+    background-color: black;
+    /* vars for duration */
+    --main-count: infinite;
+    --main-duration: 4s;
+    /* Var for intensity */
+    --color-intensity: 50%;
+    /* Var for light size */
+    --circle-width: 50px;
+    --circle-height: 100px;
+    --circle-border-radius: 25px / 50px;
+    /* vars for colors */
+    --color1-dark: 	hsl(0, 100%, 15%);
+    --color1-light: hsl(0, 100%, var(--color-intensity));
+    --color2-dark: hsl(32, 100%, 30%);
+    --color2-light: hsl(32, 100%, var(--color-intensity));
+    --color3-dark: hsl(56, 100%, 26%);
+    --color3-light: hsl(56, 100%, var(--color-intensity));
+    --color4-dark: hsl(96, 100%, 27%);
+    --color4-light: hsl(96, 100%, var(--color-intensity));
+    --color5-dark: hsl(175, 100%, 25%);
+    --color5-light: hsl(175, 100%, var(--color-intensity));
+    --color6-dark: 	hsl(219, 100%, 25%);
+    --color6-light: hsl(219, 100%, var(--color-intensity));
+    --color7-dark: hsl(300, 100%, 25%);
+    --color7-light: hsl(300, 100%, var(--color-intensity));
+}
+
+body{
+    color: white !important;
+    background-color: black !Important;
+}
+
+.container{
+    background-color: black;
+}
+
+.formItem{
+    display: flex;
+    flex-direction: column;
+}
+
+#lights{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+.circle{
+    width: var(--circle-width);
+    height: var(--circle-height);
+    border-radius: var(--circle-border-radius);
+    margin: 0 auto;
+}
+
+#buttonOn{
+    font-size: large;
+    display: block;
+    margin: 50px auto;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+#buttonOn:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+.buttonOn{
+    animation-name: all;
+    animation-iteration-count: var(--main-count);
+    animation-duration: var(--main-duration);
+}
+
+@keyframes all {
+    0% {background-color: var(--color7-light);}
+    14% {background-color: var(--color1-light);}
+    15% {background-color: var(--color1-light);}
+    28% {background-color: var(--color2-light);}
+    29% {background-color: var(--color2-light);}
+    42% {background-color: var(--color3-light);}
+    43% {background-color: var(--color3-light);}
+    56% {background-color: var(--color4-light);}
+    57% {background-color: var(--color4-light);}
+    70% {background-color: var(--color5-light);}
+    71% {background-color: var(--color5-light);}
+    84% {background-color: var(--color6-light);}
+    85% {background-color: var(--color6-light);}
+    100% {background-color: var(--color7-light);}
+}
+
+@keyframes circle1 {
+    0% {background-color: var(--color1-dark);
+        filter: drop-shadow(0 10px 30px var(--color1-dark));}
+    14% {background-color: var(--color1-light);
+        filter: drop-shadow(0 10px 30px var(--color1-light));}
+    15% {background-color: var(--color1-light);
+        filter: drop-shadow(0 10px 30px var(--color1-light));}
+    28% {background-color:var(--color1-dark);
+        filter: drop-shadow(0 10px 30px var(--color1-dark));}
+}
+
+@keyframes circle2 {
+    15% {background-color: var(--color2-dark);
+        filter: drop-shadow(0 10px 30px var(--color2-dark));}
+    28% {background-color: var(--color2-light);
+        filter: drop-shadow(0 10px 30px var(--color2-light));}
+    29% {background-color: var(--color2-light);
+        filter: drop-shadow(0 10px 30px var(--color2-light));}
+    42% {background-color: var(--color2-dark);
+        filter: drop-shadow(0 10px 30px var(--color2-dark));}
+}
+
+@keyframes circle3 {
+    29% {background-color: var(--color3-dark);
+        filter: drop-shadow(0 10px 30px var(--color3-dark));}
+    42% {background-color: var(--color3-light);
+        filter: drop-shadow(0 10px 30px var(--color3-light));}
+    43% {background-color: var(--color3-light);
+        filter: drop-shadow(0 10px 30px var(--color3-light));}
+    56% {background-color: var(--color3-dark);
+        filter: drop-shadow(0 10px 30px var(--color3-dark));}
+}
+
+@keyframes circle4 {
+    43% {background-color: var(--color4-dark);
+        filter: drop-shadow(0 10px 30px var(--color4-dark));}
+    56% {background-color: var(--color4-light);
+        filter: drop-shadow(0 10px 30px var(--color4-light));}
+    57% {background-color: var(--color4-light);
+        filter: drop-shadow(0 10px 30px var(--color4-light));}
+    70% {background-color: var(--color4-dark);
+        filter: drop-shadow(0 10px 30px var(--color4-dark));}
+}
+
+@keyframes circle5 {
+    57% {background-color: var(--color5-dark);
+        filter: drop-shadow(0 10px 30px var(--color5-dark));}
+    70% {background-color: var(--color5-light);
+        filter: drop-shadow(0 10px 30px var(--color5-light));}
+    71% {background-color: var(--color5-light);
+        filter: drop-shadow(0 10px 30px var(--color5-light));}
+    84% {background-color: var(--color5-dark);
+        filter: drop-shadow(0 10px 30px var(--color5-dark));}
+}
+
+@keyframes circle6 {
+    71% {background-color: var(--color6-dark);
+        filter: drop-shadow(0 10px 30px var(--color6-dark));}
+    84% {background-color: var(--color6-light);
+        filter: drop-shadow(0 10px 30px var(--color6-light));}
+    85% {background-color: var(--color6-light);
+        filter: drop-shadow(0 10px 30px var(--color6-light));}
+    100% {background-color: var(--color6-dark);
+        filter: drop-shadow(0 10px 30px var(--color6-dark));}
+}
+
+@keyframes circle7 {
+    0% {background-color: var(--color7-light);
+        filter: drop-shadow(0 10px 30px var(--color7-light));}
+    14% {background-color: var(--color7-dark);
+        filter: drop-shadow(0 10px 30px var(--color7-dark));}
+    85% {background-color: var(--color7-dark);
+        filter: drop-shadow(0 10px 30px var(--color7-dark));}
+    100% {background-color: var(--color7-light);
+        filter: drop-shadow(0 10px 30px var(--color7-light));}
+}
+
+#circle1{
+    background-color: var(--color1-dark);
+    filter: drop-shadow(0 10px 30px var(--color1-dark));
+}
+
+.lightsOnOff#circle1{
+    animation-name: circle1;
+    animation-iteration-count: var(--main-count);
+    animation-duration: var(--main-duration); 
+}
+
+#circle2{
+    background-color: var(--color2-dark);
+    filter: drop-shadow(0 10px 30px var(--color2-dark));
+}
+
+.lightsOnOff#circle2{
+    animation-name: circle2;
+    animation-iteration-count: var(--main-count);
+    animation-duration: var(--main-duration);
+}
+
+#circle3{
+    background-color: var(--color3-dark);
+    filter: drop-shadow(0 10px 30px var(--color3-dark));
+}
+
+.lightsOnOff#circle3{
+    animation-name: circle3;
+    animation-iteration-count: var(--main-count);
+    animation-duration: var(--main-duration);
+}
+
+#circle4{
+    background-color: var(--color4-dark);
+    filter: drop-shadow(0 10px 30px var(--color4-dark));
+}
+
+.lightsOnOff#circle4{
+    animation-name: circle4;
+    animation-iteration-count: var(--main-count);
+    animation-duration: var(--main-duration);
+}
+
+#circle5{
+    background-color: var(--color5-dark);
+    filter: drop-shadow(0 10px 30px var(--color5-dark));
+}
+
+.lightsOnOff#circle5{
+    animation-name: circle5;
+    animation-iteration-count: var(--main-count);
+    animation-duration: var(--main-duration);
+}
+
+#circle6{
+    background-color: var(--color6-dark);
+    filter: drop-shadow(0 10px 30px var(--color6-dark));
+}
+
+.lightsOnOff#circle6{
+    animation-name: circle6;
+    animation-iteration-count: var(--main-count);
+    animation-duration: var(--main-duration);
+}
+
+#circle7{
+    background-color: var(--color7-dark);
+    filter: drop-shadow(0 10px 30px var(--color7-dark));
+}
+
+.lightsOnOff#circle7{
+    animation-name: circle7;
+    animation-iteration-count: var(--main-count);
+    animation-duration: var(--main-duration);
+}
+
+.colorPickUl{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+.colorPick{
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    display: block;
+}
+
+.colorPick:hover{
+    cursor: pointer;
+}
+
+.colorPickRed{
+    background-color: rgb(134, 0, 0);
+}
+
+.colorPickOrange{
+    background-color: rgb(153, 61, 0);
+}
+
+.colorPickYellow{
+    background-color: rgb(133, 124, 0);
+}
+
+.colorPickGreen{
+    background-color: rgb(54, 136, 0);
+}
+
+.colorPickTurquiose{
+    background-color: rgb(0, 126, 115);
+}
+
+.colorPickBlue{
+    background-color: rgb(0, 44, 126);
+}
+
+.colorPickViolet{
+    background-color: rgb(128, 0, 128);
+}
+
+/* ================== */
+
+input[type=range] {
+    width: 100%;
+    margin: 10.25px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    background: #000000;
+    border: 2.8px solid #ff8600;
+    border-radius: 25px;
+    width: 100%;
+    height: 16.5px;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    margin-top: -13.05px;
+    width: 37px;
+    height: 37px;
+    background: #000000;
+    border: 3.3px solid #48ffff;
+    border-radius: 13px;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #0d0d0d;
+  }
+  input[type=range]::-moz-range-track {
+    background: #000000;
+    border: 2.8px solid #ff8600;
+    border-radius: 25px;
+    width: 100%;
+    height: 16.5px;
+    cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 37px;
+    height: 37px;
+    background: #000000;
+    border: 3.3px solid #48ffff;
+    border-radius: 13px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 11.75px 0;
+    color: transparent;
+    width: 100%;
+    height: 16.5px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #000000;
+    border: 2.8px solid #ff8600;
+    border-radius: 50px;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #000000;
+    border: 2.8px solid #ff8600;
+    border-radius: 50px;
+  }
+  input[type=range]::-ms-thumb {
+    width: 37px;
+    height: 37px;
+    background: #000000;
+    border: 3.3px solid #48ffff;
+    border-radius: 13px;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #000000;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #0d0d0d;
+  }
+  /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+  how to remove the virtical space around the range input in IE*/
+  @supports (-ms-ime-align:auto) {
+    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+    input[type=range] {
+      margin: 0;
+      /*Edge starts the margin from the thumb, not the track as other browsers do*/
+    }
+  }
+  
+  
+  
+  
